@@ -28,11 +28,11 @@ import javax.xml.bind.annotation.XmlRootElement;
 @Table(name = "notes")
 @XmlRootElement
 @NamedQueries({
-    @NamedQuery(name = "Notes.findAll", query = "SELECT n FROM Notes n")
-    , @NamedQuery(name = "Notes.findByNoteid", query = "SELECT n FROM Notes n WHERE n.noteid = :noteid")
-    , @NamedQuery(name = "Notes.findByDatecreated", query = "SELECT n FROM Notes n WHERE n.datecreated = :datecreated")
-    , @NamedQuery(name = "Notes.findByTitle", query = "SELECT n FROM Notes n WHERE n.title = :title")
-    , @NamedQuery(name = "Notes.findByContents", query = "SELECT n FROM Notes n WHERE n.contents = :contents")})
+    @NamedQuery(name = "Note.findAll", query = "SELECT n FROM Note n")
+    , @NamedQuery(name = "Note.findByNoteid", query = "SELECT n FROM Note n WHERE n.noteid = :noteid")
+    , @NamedQuery(name = "Note.findByDatecreated", query = "SELECT n FROM Note n WHERE n.datecreated = :datecreated")
+    , @NamedQuery(name = "Note.findByTitle", query = "SELECT n FROM Note n WHERE n.title = :title")
+    , @NamedQuery(name = "Note.findByContents", query = "SELECT n FROM Note n WHERE n.contents = :contents")})
 public class Note implements Serializable {
 
     private static final long serialVersionUID = 1L;
@@ -120,7 +120,7 @@ public class Note implements Serializable {
 
     @Override
     public String toString() {
-        return "models.Notes[ noteid=" + noteid + " ]";
+        return "models.Note[ noteid=" + noteid + " ]";
     }
     
 }

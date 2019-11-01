@@ -15,7 +15,7 @@ public class NotesDBException extends Exception{
      * Creates a new instance of <code>NotesBDException</code> without detail
      * message.
      */
-    public NotesBDException() 
+    public NotesDBException() 
     {
         
     }
